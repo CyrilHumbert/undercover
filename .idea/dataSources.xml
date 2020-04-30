@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="undercover@localhost" uuid="a74037d8-7f6d-42ff-ae00-a8f3bc0944c3">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/undercover?zeroDateTimeBehavior=CONVERT_TO_NULL&amp;serverTimezone=UTC</jdbc-url>
+    </data-source>
+  </component>
+</project>
