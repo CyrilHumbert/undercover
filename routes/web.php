@@ -16,3 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/create-rooms', function () {
+    return view('pages/master');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/finished', 'RoomController@createRoom');
+
+Route::get('/room/{room_link_code}', 'RoomController@roomRedirect');
+
+Route::get('/room/waiting/{room_link_code}');
