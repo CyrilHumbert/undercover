@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages/create-rooms');
 });
 
-Route::get('/create-rooms', function () {
-    return view('pages/master');
-});
+/*Route::get('/create-rooms', function () {
+    return view('pages/create-rooms');
+});*/
 
 Auth::routes();
 

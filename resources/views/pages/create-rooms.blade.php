@@ -23,6 +23,10 @@
                 Créer la room
             </button>
         </form>
+
+        @if($errors->any())
+            {!! implode('', $errors->all('<div class="error">:message</div>')) !!}
+        @endif
     </div>
 @stop
 
