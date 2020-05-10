@@ -42,11 +42,21 @@ class RoomController extends Controller
     public function roomRedirect(Request $request) {
         $room = Room::where('link_code', $request->room_link_code)->first();
 
-        $user = User::find($room->creator_id);
+        $user = Auth::user();
+
+        $creator = User::find($room->creator_id);
+
+        if(empty($user)) {
+            $is_guest = true;
+        } else {
+            $is_guest = false;
+        }
 
         if($room->is_waiting === true) {
-            return view('pages/rooms-waiting')->with('creator', $user)
-                ->with('room', $room->number_players);
+            return view('pages/rooms-waiting')->with('creator', $creator)
+                ->with('user', $user)
+                ->with('room', $room->number_players)
+                ->with('is_guest', $is_guest);
         } else {
 
         }
